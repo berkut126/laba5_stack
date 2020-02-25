@@ -1,3 +1,7 @@
+[![Build Status](https://img.shields.io/travis/Enyarina/laba5_stack/master.png?style=flat-square
+[build]: https://travis-ci.org/Enyarina/laba5_stack)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](https://forthebadge.com)
+
 # Лабораторная работа №5
 
 ## Задание 1

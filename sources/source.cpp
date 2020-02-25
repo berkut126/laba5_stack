@@ -1,3 +1,8 @@
-// Copyright 2018 Your Name <your_email>
+// Copyright 2019 Enyarina
 
-#include <header.hpp>
+#include <Stack.hpp>
+
+int main()
+{
+    return 0;
+}
