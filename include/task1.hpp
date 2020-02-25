@@ -5,7 +5,7 @@
 #include "Stack.hpp"
 
 template <class T>
-class F_Stack : public Stack<T>
+class F_Stack : public Stack<T1>
 {
 public:
     void push(const T& value) {
