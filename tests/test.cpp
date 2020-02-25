@@ -77,20 +77,6 @@ TEST(Stack, push_emplace)
     EXPECT_EQ(my_stack.Head().c, 1);
     my_stack.push_emplace(2, 'b');
     EXPECT_EQ(my_stack.Head().d, 'b');
-    S_Stack<int> my_stack{};
-    my_stack.push_emplace(1);
-    EXPECT_EQ(my_stack.Head(), 1);
-    my_stack.push_emplace(5);
-    EXPECT_EQ(my_stack.Head(), 5);
-    my_stack.push_emplace(10);
-    EXPECT_EQ(my_stack.Head(), 10);
-    S_Stack<char> my_stack2{};
-    my_stack2.push_emplace('1');
-    EXPECT_EQ(my_stack2.Head(), '1');
-    my_stack2.push_emplace('5');
-    EXPECT_EQ(my_stack2.Head(), '5');
-    my_stack2.push_emplace('8');
-    EXPECT_EQ(my_stack2.Head(), '8');
 }
 
 TEST(Stack, pop_test)
