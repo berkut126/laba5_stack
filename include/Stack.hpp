@@ -5,6 +5,7 @@
 #include <type_traits>
 #include <exception>
 
+template <typename T1, typename T2>
 template <typename T>
 class Stack
 {
