@@ -7,7 +7,7 @@
 struct Hello{
     int c = 0;
     char d = ' ';
-	Hello(int a, char b){
+    Hello(int a, char b){
         c = a;
         d = b;
     }
