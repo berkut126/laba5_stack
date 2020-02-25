@@ -72,13 +72,11 @@ TEST(Stack, pop_test_1)
 
 TEST(Stack, push_emplace)
 {
-<<<<<<< HEAD
     S_Stack<Hello> my_stack{};
     my_stack.push_emplace(1, 'a');
     EXPECT_EQ(my_stack.Head().c, 1);
     my_stack.push_emplace(2, 'b');
     EXPECT_EQ(my_stack.Head().d, 'b');
-=======
     S_Stack<int> my_stack{};
     my_stack.push_emplace(1);
     EXPECT_EQ(my_stack.Head(), 1);
@@ -93,7 +91,6 @@ TEST(Stack, push_emplace)
     EXPECT_EQ(my_stack2.Head(), '5');
     my_stack2.push_emplace('8');
     EXPECT_EQ(my_stack2.Head(), '8');
->>>>>>> cc64a18f6a1bcc3a28cb56fd4f3884a9e52c40e2
 }
 
 TEST(Stack, pop_test)
