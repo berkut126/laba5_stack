@@ -38,7 +38,7 @@ TEST(Stack, push_test_3)
     EXPECT_EQ(my_stack.Head(), '5');
     my_stack.push('8');
     EXPECT_EQ(my_stack.Head(), '8');
-    Stack<int> my_stack2();
+    Stack<int> my_stack2{};
     my_stack2.push(1);
     EXPECT_EQ(my_stack2.Head(), 1);
     my_stack2.push(5);
