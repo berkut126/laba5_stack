@@ -11,7 +11,7 @@ TEST(Stack, push_test_1)
         my_stack.push(index);
     }
     EXPECT_EQ(my_stack.Head(), 10);
-    EXPECT_EQ(std::is_move_constructible<Stack<std::string>>::value, false);
+    EXPECT_EQ(std::is_move_constructible<Stack<std::string>>::value, true);
 EXPECT_EQ(std::is_move_assignable<Stack<std::string>>::value, true);
 }
 
