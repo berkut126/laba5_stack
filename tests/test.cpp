@@ -4,6 +4,15 @@
 #include <task1.hpp>
 #include <task2.hpp>
 
+struct Hello{
+    int c = 0;
+    char d = ' ';
+    Hello(int a, char b){
+        c = a;
+        d = b;
+    }
+};
+
 TEST(Stack, push_test_1)
 {
     Stack<int> my_stack{};
@@ -63,20 +72,11 @@ TEST(Stack, pop_test_1)
 
 TEST(Stack, push_emplace)
 {
-    S_Stack<int> my_stack{};
-    my_stack.push_emplace(1);
-    EXPECT_EQ(my_stack.Head(), 1);
-    my_stack.push_emplace(5);
-    EXPECT_EQ(my_stack.Head(), 5);
-    my_stack.push_emplace(10);
-    EXPECT_EQ(my_stack.Head(), 10);
-    S_Stack<char> my_stack2{};
-    my_stack2.push_emplace('1');
-    EXPECT_EQ(my_stack2.Head(), '1');
-    my_stack2.push_emplace('5');
-    EXPECT_EQ(my_stack2.Head(), '5');
-    my_stack2.push_emplace('8');
-    EXPECT_EQ(my_stack2.Head(), '8');
+    S_Stack<Hello> my_stack{};
+    my_stack.push_emplace(1, 'a');
+    EXPECT_EQ(my_stack.Head().c, 1);
+    my_stack.push_emplace(2, 'b');
+    EXPECT_EQ(my_stack.Head().d, 'b');
 }
 
 TEST(Stack, pop_test)
