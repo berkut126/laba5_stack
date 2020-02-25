@@ -4,7 +4,7 @@
 #include "Stack.hpp"
 
 template <typename T>
-class S_Stack : public Stack<T1>
+class S_Stack : public Stack<T>
 {
 public:
     template <typename ... Args>
