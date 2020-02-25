@@ -1,4 +1,4 @@
-/ Copyright 2018 Your Name <your_email>
+// Copyright 2018 Your Name <your_email>
 #include <gtest/gtest.h>
 #include <Stack.hpp>
 #include <task1.hpp>
@@ -10,8 +10,7 @@ TEST(Stack, push_test_1)
     for (size_t index = 1; index <= 10; ++index) {
         my_stack.push(index);
     }
-
-EXPECT_EQ(my_stack.Head(), 10);
+    EXPECT_EQ(my_stack.Head(), 10);
 }
 
 TEST(Stack, push_test_2)
@@ -22,7 +21,7 @@ TEST(Stack, push_test_2)
     my_stack.push(5);
     my_stack.push(10);
 
- EXPECT_EQ(my_stack.Head(), 10);
+    EXPECT_EQ(my_stack.Head(), 10);
 }
 
 TEST(Stack, push_test_3)
