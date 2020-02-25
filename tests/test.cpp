@@ -28,12 +28,12 @@ TEST(Stack, push_test_2)
 
 TEST(Stack, push_test_3)
 {
-    Stack<char> my_stack{};
+    Stack<char, int> my_stack{};
 
     my_stack.push('1');
     EXPECT_EQ(my_stack.Head(), '1');
-    my_stack.push('5');
-    EXPECT_EQ(my_stack.Head(), '5');
+    my_stack.push(5);
+    EXPECT_EQ(my_stack.Head(), 5);
     my_stack.push('8');
     EXPECT_EQ(my_stack.Head(), '8');
 }
