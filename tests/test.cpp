@@ -34,8 +34,8 @@ TEST(Stack, push_test_3)
     EXPECT_EQ(my_stack.Head(), '1');
     my_stack.push('5');
     EXPECT_EQ(my_stack.Head(), '5');
-    my_stack.push('10');
-    EXPECT_EQ(my_stack.Head(), '10');
+    my_stack.push('8');
+    EXPECT_EQ(my_stack.Head(), '8');
 }
 
 TEST(Stack, pop_test_1)
