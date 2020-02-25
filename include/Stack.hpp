@@ -6,12 +6,13 @@
 #include <exception>
 
 template <typename T1, typename T2>
-template <typename T>
+
 class Stack
 {
 protected:
     struct Node {
-        T data;
+        T1 data;
+        T2 data;
         Node *next;
     };
     Node *head;
@@ -27,7 +28,7 @@ public:
         }
     }
 
-    void push(T&& value) {
+    void push(T1&& value) {
         if (head == nullptr) {
             auto node = new Node{std::move(value), nullptr};
             head = node;
@@ -37,7 +38,7 @@ public:
         }
     }
 
-    const T& Head() {
+    const T1& Head() {
         if (!head)
             throw std::exception();
         return head->data;
