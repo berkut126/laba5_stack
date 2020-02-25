@@ -5,13 +5,13 @@
 #include <type_traits>
 #include <exception>
 
-template <typename T1, typename T2>
+template <typename T>
 
 class Stack
 {
 protected:
     struct Node {
-        T1 data;
+        T data;
         Node *next;
     };
     Node *head;
@@ -27,7 +27,7 @@ public:
         }
     }
 
-    void push(T1&& value) {
+    void push(T&& value) {
         if (head == nullptr) {
             auto node = new Node{std::move(value), nullptr};
             head = node;
@@ -37,7 +37,7 @@ public:
         }
     }
 
-    const T1& Head() {
+    const T& Head() {
         if (!head)
             throw std::exception();
         return head->data;
