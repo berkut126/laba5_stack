@@ -12,7 +12,6 @@ class Stack
 protected:
     struct Node {
         T1 data;
-        T2 data;
         Node *next;
     };
     Node *head;
