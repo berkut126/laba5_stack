@@ -11,10 +11,10 @@ struct Hello{
         c = a;
         d = b;
     }
-    explicit Hello(int a){
+    explicit Hello(int&& a){
         c = a;
     }
-    explicit Hello(char b){
+    explicit Hello(char&& b){
         d = b;
     }
 };
