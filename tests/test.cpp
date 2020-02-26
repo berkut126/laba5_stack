@@ -84,9 +84,9 @@ TEST(Stack, push_emplace)
 {
     S_Stack<union_type> my_stack{};
     my_stack.push_emplace(1, 'a');
-    EXPECT_EQ((my_stack.pop()).c, 1);
+    EXPECT_EQ((my_stack.pop()).i, 1);
     my_stack.push_emplace(2, 'b');
-    EXPECT_EQ((my_stack.pop()).d, 'b');
+    EXPECT_EQ((my_stack.pop()).ch, 'b');
 }
 
 TEST(Stack, pop_test)
