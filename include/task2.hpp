@@ -8,13 +8,11 @@ class S_Stack : public Stack<T>
 {
 public:
     template <typename ... Args>
-    /*void push_emplace(Args&& ... value) {
+    void push_emplace(Args&& ... value) {
         auto node = Stack<T>::head;
         Stack<T>::head = new typename
                 Stack<T>::Node{std::forward<Args>(value ...), node};
-    }*/
-    void Stack<T>::push_emplace(Args &&... value) {
-    push(T(std::move(value...)));}
+    }
     
     T pop() {
         if (Stack<T>::head) {
