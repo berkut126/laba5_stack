@@ -4,20 +4,14 @@
 #include <task1.hpp>
 #include <task2.hpp>
 
-/*struct Hello{
+struct Hello{
     int c = 0;
     char d = ' ';
     Hello(int a, char b){
         c = a;
         d = b;
     }
-    explicit Hello(int&& a){
-        c = a;
-    }
-    explicit Hello(char&& b){
-        d = b;
-    }
-};*/
+};
 
 union union_type {
 int i; char ch;
@@ -30,8 +24,8 @@ TEST(Stack, push_test_1)
         my_stack.push(index);
     }
     EXPECT_EQ(my_stack.Head(), 10);
-    EXPECT_EQ(std::is_move_constructible<Stack<std::string>>::value, true);
-EXPECT_EQ(std::is_move_assignable<Stack<std::string>>::value, true);
+    EXPECT_EQ(std::is_move_constructible<Stack<std::string»::value, true);
+EXPECT_EQ(std::is_move_assignable<Stack<std::string»::value, true);
 }
 
 TEST(Stack, push_test_2)
@@ -82,7 +76,7 @@ TEST(Stack, pop_test_1)
 
 TEST(Stack, push_emplace)
 {
-    S_Stack<union_type> my_stack{};
+    S_Stack<Hello> my_stack{};
     my_stack.push_emplace(1, 'a');
     EXPECT_EQ((my_stack.pop()).i, 1);
     my_stack.push_emplace(2, 'b');
