@@ -11,6 +11,12 @@ struct Hello{
         c = a;
         d = b;
     }
+    Hello(int a){
+        c = a;
+    }
+    Hello(char b){
+        d = b;
+    }
 };
 
 TEST(Stack, push_test_1)
@@ -74,9 +80,9 @@ TEST(Stack, push_emplace)
 {
     S_Stack<Hello> my_stack{};
     my_stack.push_emplace(1, 'a');
-    EXPECT_EQ(my_stack.Head().c, 1);
+    EXPECT_EQ((my_stack.pop()).c, 1);
     my_stack.push_emplace(2, 'b');
-    EXPECT_EQ(my_stack.Head().d, 'b');
+    EXPECT_EQ((my_stack.pop()).d, 'b');
 }
 
 TEST(Stack, pop_test)
