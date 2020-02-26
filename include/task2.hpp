@@ -13,7 +13,7 @@ public:
         Stack<T>::head = new typename
                 Stack<T>::Node{std::forward<Args>(value)..., node};
     }
-    
+
     T pop() {
         if (Stack<T>::head) {
             auto node = Stack<T>::head->data;
