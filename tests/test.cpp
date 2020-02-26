@@ -4,7 +4,7 @@
 #include <task1.hpp>
 #include <task2.hpp>
 
-struct Hello{
+/*struct Hello{
     int c = 0;
     char d = ' ';
     Hello(int a, char b){
@@ -17,6 +17,10 @@ struct Hello{
     explicit Hello(char&& b){
         d = b;
     }
+};*/
+
+union union_type {
+int i; char ch;
 };
 
 TEST(Stack, push_test_1)
@@ -78,7 +82,7 @@ TEST(Stack, pop_test_1)
 
 TEST(Stack, push_emplace)
 {
-    S_Stack<Hello> my_stack{};
+    S_Stack<union_type> my_stack{};
     my_stack.push_emplace(1, 'a');
     EXPECT_EQ((my_stack.pop()).c, 1);
     my_stack.push_emplace(2, 'b');
